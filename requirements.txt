@@ -1,0 +1,7 @@
+libretranslate==1.9.6
+requests==2.31.0
+urllib3<2.0.0
+chardet<6.0.0
+ctranslate2==4.8.3
+waitress==2.1.2
+flask==2.2.5

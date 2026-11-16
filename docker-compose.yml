@@ -1,0 +1,17 @@
+services:
+  translation:
+    build: .
+    image: streamify-translation:latest
+    container_name: streamify_libretranslate
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - LT_HOST=0.0.0.0
+      - LT_PORT=5000
+      - LT_LOAD_ONLY=en,hi
+    volumes:
+      - lt-data:/home/libretranslate/.local
+
+volumes:
+  lt-data:
